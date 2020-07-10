@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <title>{{ number }}</title>
+    <div class="res"><input type="button" id="left" value="Назад">{{ date }}<input type="button" id="right" value="Вперед"></div>
+    <div class="res">
+        {% for x in list_1 %}
+            <table>
+                <tr>
+                    {% for i in range(1, (string|length + 1)) %}
+                        <td>{{i}}</td>
+                    {% endfor %}
+                </tr>
+                {% for i in x %}
+                    <tr>
+                    {% for f in i %}
+                        {% if f in string%}
+                            <td style="color: red">{{f}}</td>
+                        {% elif f=='0' %}
+                            <td style="color: white">{{f}}</td>
+                        {% else %}
+                            <td>{{f}}</td>
+                        {% endif %}
+                    {% endfor %}
+                        </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+        </div>
+        <div class="res">
+        {% for x in list_2 %}
+            <table>
+                <tr>
+                    {% for i in range(1, string|length + 1) %}
+                        <td>{{i}}</td>
+                    {% endfor %}
+                </tr>
+                    {% for i in x %}
+                        <tr>
+                        {% for f in i %}
+                            {% if f in string%}
+                                <td class="bold">{{f}}</td>
+                            {% elif f=='0' %}
+                                <td style="color: white">{{f}}</td>
+                            {% else %}
+                                <td>{{f}}</td>
+                            {% endif %}
+                        {% endfor %}
+                        </tr>
+                    {% endfor %}
+            </table>
+        {% endfor %}
+    </div>
+    <script src="{{ url_for('static', filename='js/but.js') }}"></script>
+{% endblock %}

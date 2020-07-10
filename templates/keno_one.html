@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+
+{% block content %}
+<title>Workshop</title>
+<div class="col-md-6 mx-auto">
+
+    <div class="card rounded-1">
+
+        <div class="card-header">
+            <h3 class="mb-0">Кено</h3>
+        </div>
+        <div class="card-body">
+
+            <form class="form"  action = "/keno_one" method = post>
+            <div class="form-group">
+                <lable> Числа:
+                    <textarea class="form-control" name="numbers"></textarea>
+                </lable>
+            </div>
+
+            <div class="form-group">
+                <lable> Номер игры:
+                    <input type="text" class="form-control" name="number_game">
+                </lable>
+            </div>
+
+            <div class="form-group">
+                <lable> Дата игры:
+                    <input type="date" class="form-control" name="date">
+                </lable>
+            </div>
+
+
+                <input type="submit" class="btn btn-success">
+            </form>
+        </div>
+        <!--/card-block-->
+    </div>
+</div>
+
+{% endblock %}
+
+
+
