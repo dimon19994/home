@@ -135,7 +135,7 @@ def keno_one():
             f = open("templates/analis/"+form_data["date"].split("-")[0]+".html", "r")
         except:
             f = open("templates/analis/" + form_data["date"].split("-")[0] + ".html", "w")
-            f.write("{% extends 'analis/analis_index.html' %}\n{% block year %}\n\t<table>\n\t<tr><td>Дата</td><td>Созв/град</td><td>д/л </td><td>0 пр</td><td>По выпад</td><td>По поряд</td><td>Луна б/к</td><td></td></tr></table>\t{% endblock %}")
+            f.write("{% extends 'analis/analis_index.html' %}\n{% block year %}\n\t<table>\n\t<tr><td>Data</td><td>Sozv/Grad</td><td>d/l</td><td>0 pr</td><td>Po vipad</td><td>Podryad</td><td>Luna b/k</td><td></td></tr></table>\t{% endblock %}")
             f.close()
             f = open("templates/analis/" + form_data["date"].split("-")[0] + ".html", "r")
 
@@ -296,7 +296,7 @@ def keno_many():
                 f = open("templates/analis/"+data[d][0].split("-")[0]+".html", "r")
             except:
                 f = open("templates/analis/" + data[d][0].split("-")[0] + ".html", "w")
-                f.write("{% extends 'analis/analis_index.html' %}\n{% block year %}\n\t<table>\n\t<tr><td>Дата</td><td>Созв/град</td><td>д/л </td><td>0 пр</td><td>По выпад</td><td>По поряд</td><td>Луна б/к</td><td></td></tr></table>\t{% endblock %}")
+                f.write("{% extends 'analis/analis_index.html' %}\n{% block year %}\n\t<table>\n\t<tr><td>Data</td><td>Sozv/Grad</td><td>d/l</td><td>0 pr</td><td>Po vipad</td><td>Podryad</td><td>Luna b/k</td><td></td></tr></table>\t{% endblock %}")
                 f.close()
                 f = open("templates/analis/" + data[d][0].split("-")[0] + ".html", "r")
 
@@ -851,9 +851,16 @@ def analis(year = None):
         res = res[1].split(".")[0]
     else:
         res = year
-    print(res)
+        
+        
     return render_template("analis/"+res+".html", year = res)
+    
+    
+@app.route("/d", methods=['GET', 'POST'])
+def d():
+    return render_template("analis/2020.html")
 
 
 if __name__ == "__main__":
-    app.debug = Tru
+    app.debug = True
+    app.run()
