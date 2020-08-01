@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
@@ -13,42 +13,43 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark four">
 
-  <ul class="navbar-nav topmenu" style="width: 100%;">
-    <li class="nav-item"><a class="nav-link" href="#">Кено<i class="fa fa-angle-down"></i></a>
-        <ul class="submenu">
-        <li><a href="/keno_one">Один</a></li>
-        <li><a href="/keno_many">Много</a></li>
-        <li><a href="/result/keno">Результаты</a></li>
-        <li><a href="/ststistic/keno/last">Статистика</a></li>
-        <li><a href="/analis/last">Анализ</a></li>
-      </ul>
-    </li>
+    <ul class="navbar-nav topmenu" style="width: 100%;">
+        <li class="nav-item"><a class="nav-link" href="#">Кено<i class="fa fa-angle-down"></i></a>
+            <ul class="submenu">
+                <li><a href="/keno_one">Один</a></li>
+                <li><a href="/keno_many">Много</a></li>
+                <li><a href="/result/keno">Результаты</a></li>
+                <li><a href="/ststistic/keno/last">Статистика</a></li>
+                <li><a href="/analis/last">Анализ</a></li>
+                <li><a href="/numbers/last">Таблица совпадений</a></li>
+            </ul>
+        </li>
 
-    <li class="nav-item"><a class="nav-link" href="#">Максима<i class="fa fa-angle-down"></i></a>
-        <ul class="submenu">
-        <li><a href="/maksima_one">Один</a></li>
-        <li><a href="/maksima_many">Много</a></li>
-        <li><a href="/result/maksima">Результаты</a></li>
-        <li><a href="/ststistic/maksima/last">Статистика</a></li>
-      </ul>
-    </li>
+        <li class="nav-item"><a class="nav-link" href="#">Максима<i class="fa fa-angle-down"></i></a>
+            <ul class="submenu">
+                <li><a href="/maksima_one">Один</a></li>
+                <li><a href="/maksima_many">Много</a></li>
+                <li><a href="/result/maksima">Результаты</a></li>
+                <li><a href="/ststistic/maksima/last">Статистика</a></li>
+            </ul>
+        </li>
 
-    <li class="nav-item"><a class="nav-link" href="#">Супер<i class="fa fa-angle-down"></i></a>
-        <ul class="submenu">
-        <li><a href="/super_one">Один</a></li>
-        <li><a href="/super_many">Много</a></li>
-        <li><a href="/result/super">Результаты</a></li>
-        <li><a href="/ststistic/super/last">Статистика</a></li>
-      </ul>
-    </li>
+        <li class="nav-item"><a class="nav-link" href="#">Супер<i class="fa fa-angle-down"></i></a>
+            <ul class="submenu">
+                <li><a href="/super_one">Один</a></li>
+                <li><a href="/super_many">Много</a></li>
+                <li><a href="/result/super">Результаты</a></li>
+                <li><a href="/ststistic/super/last">Статистика</a></li>
+            </ul>
+        </li>
 
-  </ul>
+    </ul>
 
 </nav>
 
 <div class="container">
 
-  {% block content %}<h1>Welcome page</h1>{% endblock %}
+    {% block content %}<h1>Welcome page</h1>{% endblock %}
 
 </div>
 
